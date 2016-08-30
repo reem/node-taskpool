@@ -2,9 +2,11 @@
   "name": "taskpool",
   "version": "1.0.0",
   "description": "Task pool for scheduling async tasks with controlled concurrency.",
-  "main": "index.js",
+  "main": "dist.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha test.js",
+    "build": "babel --presets es2015 index.js -o dist.js",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "async",
@@ -16,6 +18,9 @@
     "bluebird": "^3.4.3"
   },
   "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
     "chai": "^3.5.0",
     "mocha": "^3.0.2"
   }
