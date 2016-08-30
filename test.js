@@ -61,13 +61,13 @@ describe('WaitGroup', () => {
     wait.submit();
     expect(wait.waiting()).to.equal(2);
 
-    wait.join().then(() => expect(wait.waiting()).to.equal(0));
+    const join = wait.join().then(() => expect(wait.waiting()).to.equal(0));
 
     wait.complete();
     expect(wait.waiting()).to.equal(1);
 
     wait.complete();
 
-    return wait.join();
+    return join;
   });
 });
