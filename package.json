@@ -1,6 +1,6 @@
 {
   "name": "taskpool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Task pool for scheduling async tasks with controlled concurrency.",
   "main": "dist.js",
   "scripts": {
